@@ -1,0 +1,10 @@
+.p-panelmenu .p-panelmenu-header-action:focus,
+.p-panelmenu .p-panelmenu-header-action:hover {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.app-panelmenu{
+    border-color: transparent !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,24 @@
+<div class="products-container">
+    <div class="product-item" *ngFor="let product of products">
+      <p-card [header]="product.name" class="text-center" subheader="" ngSkipHydration>
+        <ng-template pTemplate="header">
+          <img alt="Card" [src]="product.imageUrl" class="product-image" />
+        </ng-template>
+        <ng-template pTemplate="content">
+          <a href="#" class="preco">{{ product.price }}</a>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <div class="button-container">
+            <p-button label="Ver Mais" [icon]="expanded ? 'pi pi-minus' : 'pi pi-plus'" [raised]="true" (click)="toggleExpanded(product)"></p-button>
+            <div *ngIf="!product.addedToCart" class="cart-button-container">
+              <p-button label="Carrinho" icon="pi pi-shopping-cart" [raised]="true" severity="warning" (click)="addToCart(product)"></p-button>
+            </div>
+            <div *ngIf="product.addedToCart" class="cart-button-container">
+              <p-button label="Remover" icon="pi pi-trash" [raised]="true" severity="danger" (click)="removeFromCart(product)"></p-button>
+            </div>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+  

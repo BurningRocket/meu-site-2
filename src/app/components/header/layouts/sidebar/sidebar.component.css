@@ -1,0 +1,12 @@
+.header-content{
+    display: flex;
+    align-self: center;
+}
+
+.header-username{
+    padding-left: 15px;
+}
+
+app-sidebar{
+    align-self: flex-end;
+}

@@ -1,0 +1,19 @@
+<p-sidebar [(visible)]="sidebarVisible" position="right" align="center" justify-content="space-between">
+    <ng-template pTemplate="header">
+        <div>
+            <img src="./assets/logo.png" alt="logo hera" width="80">
+        </div>
+    </ng-template>
+    <ng-template pTemplate="content" StyleClass="header-content">
+            <div>
+                <app-panelmenu></app-panelmenu>
+            </div>
+        </ng-template>    
+    <ng-template pTemplate="footer">
+        <div class="col-12">
+            <p-avatar icon="pi pi-user" styleClass="mr-2" shape="circle"></p-avatar>
+            <span class="header-username w-full">Nome do Usuário</span>
+        </div>
+    </ng-template>
+</p-sidebar>
+<p-button (click)="sidebarVisible = true" icon="pi pi-bars"></p-button>
